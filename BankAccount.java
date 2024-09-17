@@ -39,6 +39,7 @@ public class BankAccount
     {
       throw new IllegalStateException( "Not logged in");
     }
+
   }
   public double deposit(double amount)
   {
@@ -52,6 +53,25 @@ public class BankAccount
     {
       throw new IllegalStateException( "Not logged in");
     }
+  }
+
+public void logOut()
+{
+
+}
+
+  public String toString()
+  {
+    if (loggedIn == false)
+    {
+      return "Account Number: " + this.accountNum;
+    }
+    else
+    {
+      return "Account Number: " + this.balance;
+    }
+  
+
 
   }
 
