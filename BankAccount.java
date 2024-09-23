@@ -45,7 +45,19 @@ public class BankAccount
   {
     if (loggedIn == true)
     {
-      balance += deposit(500.0);
+      balance += amount ;
+      return balance;
+    }
+    else 
+    {
+      throw new IllegalStateException( "Not logged in");
+    }
+  }
+  public double withdrawl(double amount)
+  {
+    if (loggedIn == true)
+    {
+      balance -= amount;
       return balance;
 
     }
@@ -68,7 +80,7 @@ public void logOut()
     }
     else
     {
-      return "Account Number: " + this.balance;
+      return "Balance: " + this.balance + "Account Number: " + this.accountNum;
     }
   
 
